@@ -4,6 +4,6 @@
 ## Techs used 
 <ol>
     <li>Javascript</li>
-    <li>HTML</li>
     <li>Git</li>
+    <li>HTML</li>
 </ol>
