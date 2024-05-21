@@ -7,6 +7,7 @@ const result = document.querySelector("#result");
 let playerScore = 0;
 let computerScore = 0;
 let rounds = 0;
+let tiedRounds = 0;
 
 function getComputerChoice() {
   const opcoes = ["Rock", "Paper", "Scissors"];
@@ -88,6 +89,7 @@ function playAgain() {
   playerScore = 0;
   computerScore = 0;
   rounds = 0;
+  tiedRounds = 0;
 }
 
 function playRockBtn() {
@@ -102,6 +104,8 @@ function playRockBtn() {
   } else if (resultPlay.includes("lost")) {
     computerScore += 1;
   } else if (resultPlay.includes("tie")) {
+    tiedRounds += 1;
+
     playerScore = playerScore;
     computerScore = computerScore;
   }
@@ -119,6 +123,7 @@ function playRockBtn() {
     if (playerScore > computerScore) {
       result.innerHTML = `
         You won ${playerScore} rounds against computer's ${computerScore}<br>
+        Tied rounds: ${tiedRounds}<br>
         Congratulations! You're the winner!
         `;
 
@@ -129,6 +134,7 @@ function playRockBtn() {
     } else if (playerScore < computerScore) {
       result.innerHTML = `
         Computer won ${computerScore} rounds agaisnt your ${playerScore} wins<br>
+        Tied rounds: ${tiedRounds}<br>
         You lost this match. Computer's the winner!
         `;
 
@@ -162,6 +168,11 @@ function playPaperBtn() {
     playerScore += 1;
   } else if (resultPlay.includes("lost")) {
     computerScore += 1;
+  } else if (resultPlay.includes("tie")) {
+    tiedRounds += 1;
+
+    playerScore = playerScore;
+    computerScore = computerScore;
   }
 
   result.innerHTML += `<p>Player score: ${playerScore}</p>
@@ -177,6 +188,7 @@ function playPaperBtn() {
     if (playerScore > computerScore) {
       result.innerHTML = `
         You won ${playerScore} rounds against computer's ${computerScore}<br>
+        Tied rounds: ${tiedRounds}<br>
         Congratulations! You're the winner!
         `;
 
@@ -187,6 +199,7 @@ function playPaperBtn() {
     } else if (playerScore < computerScore) {
       result.innerHTML = `
         Computer won ${computerScore} rounds agaisnt your ${playerScore} wins<br>
+        Tied rounds: ${tiedRounds}<br>
         You lost this match. Computer's the winner!
         `;
 
@@ -220,6 +233,11 @@ function playScissorsBtn() {
     playerScore += 1;
   } else if (resultPlay.includes("lost")) {
     computerScore += 1;
+  } else if (resultPlay.includes("tie")) {
+    tiedRounds += 1;
+
+    playerScore = playerScore;
+    computerScore = computerScore;
   }
 
   result.innerHTML += `<p>Player score: ${playerScore}</p>
@@ -235,6 +253,7 @@ function playScissorsBtn() {
     if (playerScore > computerScore) {
       result.innerHTML = `
         You won ${playerScore} rounds against computer's ${computerScore}<br>
+        Tied rounds: ${tiedRounds}<br>
         Congratulations! You're the winner!
         `;
 
@@ -245,6 +264,7 @@ function playScissorsBtn() {
     } else if (playerScore < computerScore) {
       result.innerHTML = `
         Computer won ${computerScore} rounds agaisnt your ${playerScore} wins<br>
+        Tied rounds: ${tiedRounds}<br>
         You lost this match. Computer's the winner!
         `;
 
