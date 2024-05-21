@@ -4,13 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, paper, scissors</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Let's play!</h1>
-    <ol>
-        <li>Press F12 or click on this page with your mouse's right button</li>
-        <li>Welcome de devtools! Now go to <strong>console</strong> and have fun!</li>
-    </ol>
+    <p>Rock, paper or scissors? Choose below</p>
+    <div class="play-btns">
+      <button id="rock">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
+    </div>
+
+    <div class="result">
+      <p id="result"></p>
+      <button id="play-again" class="play-again">Play again</button>
+    </div>
 
     <script src="script.js"></script>
   </body>
